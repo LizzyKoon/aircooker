@@ -3,6 +3,8 @@ class OffersController < ApplicationController
   end
 
   def new
+    @offers = Offers.new
+  
   end
 
   def show
