@@ -13,13 +13,7 @@ class OffersController < ApplicationController
       @offer.user = current_user
       redirect_to offer_path(@offer)
     else
-<<<<<<< HEAD
-    redirect_to offer_path
-
-    redirect_to offer_path(@offer)
-=======
       render :new, status: :unprocessable_entity
->>>>>>> 6c336e10ecef0011c0ae2707970d916a681e9529
     end
   end
 
