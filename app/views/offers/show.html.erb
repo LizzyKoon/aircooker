@@ -1,2 +1,10 @@
 <h1>Offers#show</h1>
 <p>Find me in app/views/offers/show.html.erb</p>
+
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.offers.each do |offer| %>
+    <li class="list-group-item"><%= offer.content %></li>
+  <% end %>
+</ul>
+<br>
