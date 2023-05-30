@@ -3,19 +3,25 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
-  def show
-    @offer = Offer.find(params[:id])
-  end
-
   def new
     @offer = Offer.new
   end
 
   def create
     @offer = Offer.new(offer_params)
+<<<<<<< HEAD
     if @offer.save
     else
     redirect_to offer_path
+=======
+    @offer.user = current_user
+    @offer.save
+    redirect_to offer_path(@offer)
+  end
+
+  def show
+    @offer = Offer.find(params[:id])
+>>>>>>> 9885011759374d60cbad1a48217d3333b50abb5a
   end
 
   private
