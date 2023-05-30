@@ -37,7 +37,7 @@ mawashigiri = Offer.create(
   capacity: 15,
   name: "Mawashigiri",
   price: 400
- )
+)
 
 mawashigiri.user = rayan
 mawashigiri.save!
@@ -53,5 +53,3 @@ pizzananas = Offer.create(
 
 pizzananas.user = max
 pizzananas.save!
-
-p "created offers"
