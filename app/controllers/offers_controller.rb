@@ -1,15 +1,25 @@
 class OffersController < ApplicationController
   def index
-  end
-
-  def new
-    @offers = Offers.new
-  
+    @offers = Offer.all
   end
 
   def show
+    @offer = Offer.find(params[:id])
   end
 
-  def edit
+  def new
+    @offer = Offer.new
+  end
+
+  def create
+    @offer = Offer.new(offer_params)
+    @offer.save
+    redirect_to offer_path
+  end
+
+  private
+
+  def offer_params
+    params.require(:offer).permit(:location, :description, :availability, :capacity, :name, :price)
   end
 end
