@@ -9,9 +9,13 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(offer_params)
+    if @offer.save
+    else
+    redirect_to offer_path
     @offer.user = current_user
     @offer.save
     redirect_to offer_path(@offer)
+    end
   end
 
   def show

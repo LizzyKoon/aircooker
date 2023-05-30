@@ -31,7 +31,7 @@ mawashigiri = Offer.create(
   capacity: 15,
   name: "Mawashigiri",
   price: 400
- )
+)
 
 pizzananas = Offer.create(
   location: "Paris",
@@ -40,6 +40,4 @@ pizzananas = Offer.create(
   capacity: 12,
   name: "Pizzananas",
   price: 100
-  )
-
-  p "created offers"
+)
