@@ -1,2 +1,18 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Book a new offer</h3>
+        <%= simple_form_for [@offer, @booking] do |f| %>
+          <%= f.input :name, placeholder: 'name' %>
+          <%= f.input :start_date, placeholder: 'start_date' %>
+          <%= f.input :end_date, placeholder: 'end_date' %>
+          <%= f.input :comment, placeholder: 'comment' %>
+          <%= f.integer :total_amount, (@booking.end_date - @booking.start_date) * @offer.price %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
