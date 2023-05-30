@@ -4,7 +4,6 @@ class OffersController < ApplicationController
 
   def new
     @offers = Offers.new
-  
   end
 
   def show
