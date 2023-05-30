@@ -3,10 +3,6 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
-  def show
-    @offer = Offer.find(params[:id])
-  end
-
   def new
     @offer = Offer.new
   end
@@ -14,11 +10,16 @@ class OffersController < ApplicationController
   def create
     @offer = Offer.new(offer_params)
     if @offer.save
-    redirect_to offers_path
+      @offer.user = current_user
+      redirect_to offer_path(@offer)
     else
-    render :new, status: :unprocessable_entity
-
+      render :new, status: :unprocessable_entity
     end
+
+  end
+
+  def show
+    @offer = Offer.find(params[:id])
   end
 
   private
