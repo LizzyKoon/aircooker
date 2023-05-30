@@ -5,33 +5,41 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-luc_point_reverse = User.create([{ first_name: "Luc"}, { last_name: "Pointreverse"}, { phone_number: "06 66 66 66 66 "}, { email: "lucpointreverse@gmail.com"}, { address: "123 rue du pointmele 75012 Paris"}])
-manon = User.create([{ first_name: "Manon"}, { last_name: "Jamaisaleure"}, { phone_number: "06 76 53 56 76 "}, { email: "manonjamaisaleure@gmail.com"}, { address: "15 Bd du retard 75007 Paris"}]),
-vegeta = User.create([{ first_name: "Vegeta"}, { last_name: "Algerien"}, { phone_number: "06 01 02 03 04 "}, { email: "vegetaalgerien@gmail.com"}, { address: "1 rue de L'Algerie 75010 Paris"}])
+julien = User.create(first_name: "julien", last_name: "Fonteneau", phone_number: "06 66 66 66 66 ", email: "julien@gmail.com", address: "123 rue de rivoli 75001 Paris", password: "CSCJDS")
 
-boudin = Offer.create([{
+rayan = User.create(first_name: "rayan", last_name: "Anser", phone_number: "06 66 67 89 34 ", email: "ray@gmail.com", address: "69 rue de paris 75003 Paris", password: "CSFEDFDVDS")
+
+max = User.create(first_name: "max", last_name: "Audibert", phone_number: "06 66 66 12 66 ", email: "max@gmail.com", address: "18 rue de londres 75017 Paris", password: "AEARFEFDS")
+
+mihaja = User.create(first_name: "mihaja", last_name: "R", phone_number: "06 66 13 66 66 ", email: "mihr@gmail.com", address: "12 rue de madrid 75018 Paris", password: "VDVDVIZORFDS")
+
+p "created users"
+
+boudin = Offer.create(
   location: "Paris",
   description: "from Top Chef 2016",
   availability: "y/n",
   capacity: 20,
   name: "Boudin & Ravioles",
   price: 300
-}])
+  )
 
-mawashigiri = Offer.create([{
+mawashigiri = Offer.create(
   location: "Paris",
   description: "trained by the best japanese masters",
   availability: "y/n",
   capacity: 15,
   name: "Mawashigiri",
-  price: 400,
-}])
+  price: 400
+ )
 
-pizzananas = Offer.create([{
+pizzananas = Offer.create(
   location: "Paris",
   description: "el chefo di Roma",
   availability: "y/n",
   capacity: 12,
   name: "Pizzananas",
-  price: 100,
-  }])
+  price: 100
+  )
+
+  p "created offers"
