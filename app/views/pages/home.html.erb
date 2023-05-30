@@ -1,2 +1,18 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All offers</h1>
+      <ul class="list-group mb-3">
+        <% @offers.each do |offer| %>
+          <li class="list-group-item">
+            <%= link_to offer.name, offer_path(offer) %>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to "Add a new offer", new_offer_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>

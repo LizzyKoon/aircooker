@@ -13,8 +13,12 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(offer_params)
-    @offer.save
-    redirect_to offer_path
+    if @offer.save
+    redirect_to offers_path
+    else
+    render :new, status: :unprocessable_entity
+
+    end
   end
 
   private
