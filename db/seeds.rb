@@ -24,7 +24,7 @@ mawashigiri = Offer.create([{
   availability: "y/n",
   capacity: 15,
   name: "Mawashigiri",
-  price: 400,
+  price: 400
 }])
 
 pizzananas = Offer.create([{
@@ -33,5 +33,5 @@ pizzananas = Offer.create([{
   availability: "y/n",
   capacity: 12,
   name: "Pizzananas",
-  price: 100,
+  price: 100
   }])
