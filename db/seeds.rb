@@ -16,6 +16,15 @@ max = User.create!(first_name: "max", last_name: "Audibert", phone_number: "06 6
 
 mihaja = User.create!(first_name: "mihaja", last_name: "R", phone_number: "06 66 13 66 66 ", email: "mihr@gmail.com", address: "12 rue de madrid 75018 Paris", password: "VDVDVIZORFDS")
 
+paul = User.create!(first_name: "paul", last_name: "R", phone_number: "06 66 13 99 02 ", email: "paul@gmail.com", address: "56 rue de madrid 75018 Paris", password: "VEZRFOJVFDRFDS")
+
+nadia = User.create!(first_name: "nadia", last_name: "B", phone_number: "06 34 13 66 66 ", email: "nadia@gmail.com", address: "13 rue de madrid 75003 Paris", password: "VDFFVDVZFRFDS")
+
+nicolas = User.create!(first_name: "nicolas", last_name: "Z", phone_number: "06 12 13 66 66 ", email: "nico@gmail.com", address: "132 rue de copenhague 75007 Paris", password: "ZAZERZVDVIZORFDS")
+
+guilhem = User.create!(first_name: "guilhem", last_name: "M", phone_number: "06 99 13 66 66 ", email: "guilhem@gmail.com", address: "234 rue de lisbon 75017 Paris", password: "CVNCDEIZRFVDVIZORFDS")
+
+
 p "created users"
 
 boudin = Offer.create(
@@ -53,3 +62,63 @@ pizzananas = Offer.create(
 
 pizzananas.user = max
 pizzananas.save!
+
+bocuse = Offer.create(
+  location: "Paris",
+  description: "Master",
+  availability: true,
+  capacity: 20,
+  name: "Coquillettes truffle",
+  price: 900
+  )
+
+bocuse.user = mihaja
+bocuse.save!
+
+robuchon = Offer.create(
+  location: "Paris",
+  description: "Multi stars",
+  availability: true,
+  capacity: 20,
+  name: "Gastronomie at home",
+  price: 300
+  )
+
+robuchon.user = paul
+robuchon.save!
+
+etchebest = Offer.create(
+  location: "Paris",
+  description: "from South-West",
+  availability: true,
+  capacity: 20,
+  name: "C'est croquant, c'est fondant",
+  price: 300
+  )
+
+etchebest.user = nadia
+etchebest.save!
+
+pic = Offer.create(
+  location: "Paris",
+  description: "Best Chef in Le Marais",
+  availability: true,
+  capacity: 20,
+  name: "Ciboulette & Arbalette",
+  price: 300
+  )
+
+pic.user = nicolas
+pic.save!
+
+lignac = Offer.create(
+  location: "Paris",
+  description: "bistro owner",
+  availability: true,
+  capacity: 20,
+  name: "Harengs Pomme à l'huile",
+  price: 300
+  )
+
+lignac.user = guilhem
+lignac.save!
