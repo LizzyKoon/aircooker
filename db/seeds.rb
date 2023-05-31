@@ -33,7 +33,8 @@ boudin = Offer.create(
   availability: true,
   capacity: 20,
   name: "Boudin & Ravioles",
-  price: 300
+  price: 300,
+  picture_url:
   )
 
 boudin.user = julien
@@ -45,8 +46,9 @@ mawashigiri = Offer.create(
   availability: false,
   capacity: 15,
   name: "Mawashigiri",
-  price: 400
-)
+  price: 400,
+  picture_url:
+  )
 
 mawashigiri.user = rayan
 mawashigiri.save!
@@ -57,7 +59,8 @@ pizzananas = Offer.create(
   availability: true,
   capacity: 12,
   name: "Pizzananas",
-  price: 100
+  price: 100,
+  picture_url:
   )
 
 pizzananas.user = max
@@ -69,7 +72,8 @@ bocuse = Offer.create(
   availability: true,
   capacity: 20,
   name: "Coquillettes truffle",
-  price: 900
+  price: 900,
+  picture_url:
   )
 
 bocuse.user = mihaja
@@ -81,7 +85,8 @@ robuchon = Offer.create(
   availability: true,
   capacity: 20,
   name: "Gastronomie at home",
-  price: 300
+  price: 300,
+  picture_url:
   )
 
 robuchon.user = paul
@@ -93,7 +98,8 @@ etchebest = Offer.create(
   availability: true,
   capacity: 20,
   name: "C'est croquant, c'est fondant",
-  price: 300
+  price: 300,
+  picture_url:
   )
 
 etchebest.user = nadia
@@ -105,7 +111,8 @@ pic = Offer.create(
   availability: true,
   capacity: 20,
   name: "Ciboulette & Arbalette",
-  price: 300
+  price: 300,
+  picture_url:
   )
 
 pic.user = nicolas
@@ -117,7 +124,8 @@ lignac = Offer.create(
   availability: true,
   capacity: 20,
   name: "Harengs Pomme à l'huile",
-  price: 300
+  price: 300,
+  picture_url:
   )
 
 lignac.user = guilhem
