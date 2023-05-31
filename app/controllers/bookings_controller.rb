@@ -9,7 +9,9 @@ class BookingsController < ApplicationController
     @booking.offer = @offer
     @booking.user = current_user
     if @booking.save
-      redirect_to offers_path(@offer) #ajouter alerte
+      "Your booking has been done!"
+      redirect_to offer_path(@offer)
+       #ajouter alerte
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,6 +28,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:comment, :start_date, :end_date, :user_id, :offer_id)
+    params.require(:booking).permit(:comment, :start_date, :end_date, :user_id, :offer_id, :created_at, :updated_at)
   end
 end

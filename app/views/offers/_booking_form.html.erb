@@ -3,21 +3,18 @@
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Book a new offer</h3>
-        <%= @booking = Booking.new %>
-        <%= @offer = Offer.find(params[:id]) %>
-        <%= simple_form_for [@offer, @booking] do |f| %>
+        <%= simple_form_for [@offer, @booking], data: { controller: 'dater' } do |f| %>
           <%# <%= f.input :name, placeholder: 'name' %>
-          <%= f.input :start_date, input_html: {data: { controller: 'datepicker' } }, as: :string %>
-          <%= f.input :end_date, input_html: {data: { controller: 'datepicker' } }, as: :string %>
-          <%# <%= start_date - end_date  %> 
+          <%= f.input :start_date, input_html: {data: { controller: 'datepicker', dater_target: "startDate" } }, as: :string %>
+          <%= f.input :end_date, input_html: {data: { controller: 'datepicker', action:"change->dater#count", dater_target: "endDate" } }, as: :string %>
+          <%# <%= start_date - end_date  %>
           <%= "Prix = ""#{@offer.price}""€"%>
           <%= f.input :comment, placeholder: 'comment' %>
-          <%= f.input :total_amount, placeholder: 250  %>
+          <%= f.input :total_amount, {data: { dater_target: "totalAmount", dater_price_value: @offer.price } }  %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<%# <%= "#{@offer.start_date.value - @offer.end_date.value}" %>
+<%# data_dater_price_value: @offer.price %>
