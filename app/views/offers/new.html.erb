@@ -6,6 +6,6 @@
   <%= f.input :capacity %>
   <%= f.input :name %>
   <%= f.input :price %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Submit offers", class: "btn btn-primary" %>
 <% end %>
-

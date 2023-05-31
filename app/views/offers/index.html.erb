@@ -1,18 +1,19 @@
-<h1>Offers#index</h1>
-<p>Find me in app/views/offers/index.html.erb</p>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All offers</h1>
-      <ul class="list-group mb-3">
+      <h1>Chefs in Paris</h1>
+      <ul class="cards">
         <% @offers.each do |offer| %>
-          <li class="list-group-item">
-            <%= link_to offer.name, offer_path(offer) %>
+          <li class="co-12 col-sm-6 col-md-4 mb-3">
+            <div>
+              <%= link_to offer.name, offer_path(offer), class:"text-decoration-none" %>
+              <div class="card">
+                <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+              </div>
+            </div>
           </li>
         <% end %>
       </ul>
       <%= link_to "Add a new offer", new_offer_path, class: 'btn btn-primary' %>
-    </div>
   </div>
 </div>
