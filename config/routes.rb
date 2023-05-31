@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  resources :offers, only: %i[index show new create] do
+  resources :offers, only: %i[index show new create delete destroy] do
     resources :bookings, only: %i[new create]
   end
 
