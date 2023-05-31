@@ -1,17 +1,24 @@
-<p><strong>offers</strong></p>
-<ul class="list-group">
-    <li class="list-group-item"><%= @offer.name %></li>
-    <li class="list-group-item"><%= @offer.availability %></li>
-    <li class="list-group-item"><%= @offer.capacity %></li>
-    <li class="list-group-item"><%= @offer.location %></li>
-    <li class="list-group-item"><%= @offer.description %></li>
+<%#<h1><strong>offers</strong></h1> %>
+<div class="container">
+  <%#div class="list-group"%>
+    <div class="list-group-item"><h1><%= @offer.name %></h1></div>
 
-</ul>
+    <div> </div>
+<div class="list-group-item"><%= @offer.picture_url %></div>
 
-<div data-controller="toggle">
-  <button class='btn btn-primary' data-action='click->toggle#fire'>Réserve ton repas</button>
-  <div data-toggle-target="togglableElement" class="d-none">
-    <%= render "booking_form", booking: @booking %>
+
+    <div class="list-group-item"><%= @offer.availability %></div>
+    <div class="list-group-item"><%= @offer.capacity %></div>
+    <div class="list-group-item"><%= @offer.location %></div>
+    <div class="list-group-item"><%= @offer.description %></div>
+
+
+
+  <div data-controller="toggle">
+    <button class='btn btn-primary' data-action='click->toggle#fire'>Réserve ton repas</button>
+    <div data-toggle-target="togglableElement" class="d-none">
+      <%= render "booking_form", booking: @booking %>
+    </div>
   </div>
 </div>
 <%# déso nico %>
