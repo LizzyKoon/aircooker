@@ -1,19 +1,19 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+  <div class="row w-100 ">
+    <div class="">
       <h1>CHEFS IN PARIS</h1>
-      <ul class="cards">
+      <div class="cards">
         <% @offers.each do |offer| %>
-          <div class="co-12 col-sm-6 col-md-4 mb-3">
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
               <div class="card">
-                <img src= offer.picture_url >
+                <img src= "<%=offer.picture_url%>">
+                <%= link_to offer.name, offer_path(offer), class:"chef_name"%>
               </div>
-              <%= link_to offer.name, offer_path(offer), class:"chef_name"%>
           </div>
         <% end %>
-      </ul>
-      <div class="ml-2">
-       <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
+      </div>
+      <div>
+        <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
       </div>
   </div>
 </div>
