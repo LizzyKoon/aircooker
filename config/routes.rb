@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new create]
   end
 
+  resources :bookings
   get '/pages/dashboard'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

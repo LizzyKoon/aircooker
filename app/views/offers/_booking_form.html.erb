@@ -1,13 +1,16 @@
-
 <div class="container py-5">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Book a new offer</h3>
+        <%= @booking = Booking.new %>
+        <%= @offer = Offer.find(params[:id]) %>
         <%= simple_form_for [@offer, @booking] do |f| %>
           <%# <%= f.input :name, placeholder: 'name' %>
-          <%= f.input :start_date, placeholder: 'start_date' %>
-          <%= f.input :end_date, placeholder: 'end_date' %>
+          <%= f.input :start_date, input_html: {data: { controller: 'datepicker' } }, as: :string %>
+          <%= f.input :end_date, input_html: {data: { controller: 'datepicker' } }, as: :string %>
+          <%# <%= start_date - end_date  %> 
+          <%= "Prix = ""#{@offer.price}""€"%>
           <%= f.input :comment, placeholder: 'comment' %>
           <%= f.input :total_amount, placeholder: 250  %>
           <%= f.submit class: 'btn btn-flat' %>
@@ -17,5 +20,4 @@
   </div>
 </div>
 
-
-<%# (@booking.end_date - @booking.start_date) * @offer.price %>
+<%# <%= "#{@offer.start_date.value - @offer.end_date.value}" %>
