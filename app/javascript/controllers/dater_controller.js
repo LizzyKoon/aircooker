@@ -5,16 +5,20 @@ import flatpickr from "flatpickr";
 export default class extends Controller {
   static targets = ["startDate", "endDate", "totalAmount"]
   static values = {
-    price: Integer
-  }
+    price: Number
+   }
 
   connect() {
   }
 
   count(){
-  const counter = (this.endDateValue - this.startDateValue);
-  this.totalAmountValue = counter * priceValue
-  console.log(this.endDateValue);
-  console.log(this.startDateValue);
+  const counter = ((Date.parse(this.endDateTarget.value) - Date.parse(this.startDateTarget.value)) / (1000 * 60 * 60 * 24));
+  const totalAmountValue = counter * this.priceValue
+  this.totalAmountTarget.value = totalAmountValue
+  // console.log(this.endDate);
+  // console.log(this.endDateTarget.value.getTime());
+  console.log(this.priceValue);
+  // console.log(Date.parse(this.endDateTarget.value));
+  // console.log(this.startDateValue);
   }
 }
