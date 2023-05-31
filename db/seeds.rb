@@ -34,7 +34,8 @@ boudin = Offer.create(
   capacity: 20,
   name: "Boudin & Ravioles",
   price: 300,
-  picture_url:
+  picture_url:#( File.open(Rails.root.join('app/assets/images/gokurebeux.jpg'))'gokurebeu.jpg')
+
   )
 
 boudin.user = julien
