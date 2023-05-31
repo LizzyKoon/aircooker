@@ -34,9 +34,9 @@ boudin = Offer.create(
   capacity: 20,
   name: "Boudin & Ravioles",
   price: 300,
-  picture_url:#( File.open(Rails.root.join('app/assets/images/gokurebeux.jpg'))'gokurebeu.jpg')
-
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
   )
+
 
 boudin.user = julien
 boudin.save!
@@ -48,8 +48,8 @@ mawashigiri = Offer.create(
   capacity: 15,
   name: "Mawashigiri",
   price: 400,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 mawashigiri.user = rayan
 mawashigiri.save!
@@ -61,8 +61,8 @@ pizzananas = Offer.create(
   capacity: 12,
   name: "Pizzananas",
   price: 100,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 pizzananas.user = max
 pizzananas.save!
@@ -74,8 +74,8 @@ bocuse = Offer.create(
   capacity: 20,
   name: "Coquillettes truffle",
   price: 900,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 bocuse.user = mihaja
 bocuse.save!
@@ -87,8 +87,8 @@ robuchon = Offer.create(
   capacity: 20,
   name: "Gastronomie at home",
   price: 300,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 robuchon.user = paul
 robuchon.save!
@@ -100,8 +100,8 @@ etchebest = Offer.create(
   capacity: 20,
   name: "C'est croquant, c'est fondant",
   price: 300,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 etchebest.user = nadia
 etchebest.save!
@@ -113,8 +113,8 @@ pic = Offer.create(
   capacity: 20,
   name: "Ciboulette & Arbalette",
   price: 300,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 pic.user = nicolas
 pic.save!
@@ -126,8 +126,8 @@ lignac = Offer.create(
   capacity: 20,
   name: "Harengs Pomme à l'huile",
   price: 300,
-  picture_url:
-  )
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
 lignac.user = guilhem
 lignac.save!
