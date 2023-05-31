@@ -1,17 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Chefs in Paris</h1>
+      <h1>CHEFS IN PARIS</h1>
       <ul class="cards">
         <% @offers.each do |offer| %>
           <div class="co-12 col-sm-6 col-md-4 mb-3">
-              <%# <%= cl_image_tag offer.photo.key, height: 300, width: 300, crop: :fill %>
-              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              <div class="card">
+                <img src= offer.picture_url >
               </div>
               <%= link_to offer.name, offer_path(offer), class:"chef_name"%>
           </div>
         <% end %>
       </ul>
-      <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
+      <div class="ml-2">
+       <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
+      </div>
   </div>
 </div>
