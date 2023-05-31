@@ -3,9 +3,13 @@
   <%#div class="list-group"%>
     <div class="list-group-item"><h1><%= @offer.name %></h1></div>
 
-    <div> </div>
-<div class="list-group-item"><%= @offer.picture_url %></div>
-
+  <div class="d-flex">
+        <div class="list-group-item"><%= cl_image_tag @offer.picture[0].key %></div>
+     <div class= "card">
+        <div class="list-group-item"><%= cl_image_tag @offer.picture[1].key %></div>
+        <div class="list-group-item"><%= cl_image_tag @offer.picture[2].key %></div>
+     </div>
+  </div>
 
     <div class="list-group-item"><%= @offer.availability %></div>
     <div class="list-group-item"><%= @offer.capacity %></div>
