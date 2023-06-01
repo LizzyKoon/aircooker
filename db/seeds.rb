@@ -34,6 +34,9 @@ boudin = Offer.create(
   capacity: 20,
   name: "Boudin & Ravioles",
   price: 300,
+
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+
   )
 img = File.open("app/assets/images/gokurebeu.jpeg")
 boudin.picture.attach(io: img, filename: "gokurebeu.jpeg", content_type: "image/jpeg")
@@ -45,6 +48,29 @@ boudin.picture.attach(io: img, filename: "boudin.jpeg", content_type: "image/jpe
 boudin.user = julien
 boudin.save!
 
+
+ mawashigiri = Offer.create(
+   location: "Paris",
+   description: "trained by the best japanese masters",
+   availability: false,
+   capacity: 15,
+   name: "Mawashigiri",
+   price: 400,
+   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+ )
+ img = File.open("app/assets/images/chefsushi.jpeg")
+ mawashigiri.picture.attach(io: img, filename: "chefsushi.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/ramen.jpeg")
+ mawashigiri.picture.attach(io: img, filename: "ramen.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/sushi.jpeg")
+ mawashigiri.picture.attach(io: img, filename: "sushi.jpeg", content_type: "image/jpeg")
+
+ mawashigiri.user = rayan
+ mawashigiri.save!
+
+ 
+
+ 
 mawashigiri = Offer.create(
   location: "Paris",
   description: "Trained by the best Japanese masters",
@@ -55,8 +81,12 @@ mawashigiri = Offer.create(
   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
 )
 
-img = File.open("app/assets/images/boudin.jpeg")
-mawashigiri.picture.attach(io: img, filename: "boudin.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/chefsushi.jpeg")
+ mawashigiri.picture.attach(io: img, filename: "chefsushi.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/ramen.jpeg")
+ mawashigiri.picture.attach(io: img, filename: "ramen.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/sushi.jpeg")
+ mawashigiri.picture.attach(io: img, filename: "sushi.jpeg", content_type: "image/jpeg")
 
 
 mawashigiri.user = rayan
@@ -71,6 +101,13 @@ pizzananas = Offer.create(
   price: 100,
   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
 )
+ img = File.open("app/assets/images/pizza.jpeg")
+ pizzananas.picture.attach(io: img, filename: "pizza.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/pizzananas.jpeg")
+ pizzananas.picture.attach(io: img, filename: "pizzananas.jpeg", content_type: "image/jpeg")
+ img = File.open("app/assets/images/pizzananas2.jpeg")
+ pizzananas.picture.attach(io: img, filename: "pizzananas2.jpeg", content_type: "image/jpeg")
+
 
 pizzananas.user = max
 pizzananas.save!
