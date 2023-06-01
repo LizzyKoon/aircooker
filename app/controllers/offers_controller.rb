@@ -2,7 +2,11 @@ class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
+    if params[:query].present?
+     @offers = Offer.where(food_category: params[:query])
+    else
     @offers = Offer.all
+    end
   end
 
   def new
