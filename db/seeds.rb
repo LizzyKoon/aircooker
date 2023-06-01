@@ -29,6 +29,7 @@ p "created users"
 
 boudin = Offer.create(
   location: "Paris",
+  food_category: "French",
   description: "from Top Chef 2016",
   availability: true,
   capacity: 20,
@@ -47,6 +48,7 @@ boudin.save!
 
 mawashigiri = Offer.create(
   location: "Paris",
+  food_category: "Japanese",
   description: "trained by the best japanese masters",
   availability: false,
   capacity: 15,
@@ -65,6 +67,7 @@ mawashigiri.save!
 
 pizzananas = Offer.create(
   location: "Paris",
+  food_category: "Italian",
   description: "El chefo di Roma",
   availability: true,
   capacity: 12,
@@ -83,6 +86,7 @@ pizzananas.save!
 
 bocuse = Offer.create(
   location: "Paris",
+  food_category: "Italian",
   description: "Master",
   availability: true,
   capacity: 20,
@@ -104,6 +108,7 @@ bocuse.save!
 
 robuchon = Offer.create(
   location: "Paris",
+  food_category: "French",
   description: "Multi stars",
   availability: true,
   capacity: 20,
@@ -124,6 +129,7 @@ robuchon.save!
 
 etchebest = Offer.create(
   location: "Paris",
+  food_category: "American",
   description: "From South-West",
   availability: true,
   capacity: 20,
@@ -136,6 +142,7 @@ etchebest.save!
 
 pic = Offer.create(
   location: "Paris",
+  food_category: "African",
   description: "Best Chef in Le Marais",
   availability: true,
   capacity: 20,
@@ -148,6 +155,7 @@ pic.save!
 
 lignac = Offer.create(
   location: "Paris",
+  food_category: "Belgium",
   description: "Bistro owner",
   availability: true,
   capacity: 20,
