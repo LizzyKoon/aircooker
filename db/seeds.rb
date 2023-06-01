@@ -33,8 +33,8 @@ boudin = Offer.create(
   availability: true,
   capacity: 20,
   name: "Boudin & Ravioles",
-  price: 300
-  # picture_url: File.open(Rails.root.join('app/assets/images/gokurebeu.jpeg'))
+  price: 300,
+  picture_url: File.open(Rails.root.join('app/assets/images/gokurebeu.jpeg'))
   )
 img = File.open("app/assets/images/gokurebeu.jpeg")
 boudin.picture.attach(io: img, filename: "gokurebeu.jpeg", content_type: "image/jpeg")
@@ -46,93 +46,93 @@ boudin.picture.attach(io: img, filename: "boudin.jpeg", content_type: "image/jpe
 boudin.user = julien
 boudin.save!
 
-# mawashigiri = Offer.create(
-#   location: "Paris",
-#   description: "trained by the best japanese masters",
-#   availability: false,
-#   capacity: 15,
-#   name: "Mawashigiri",
-#   price: 400,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+mawashigiri = Offer.create(
+  location: "Paris",
+  description: "Trained by the best Japanese masters",
+  availability: false,
+  capacity: 15,
+  name: "Mawashigiri",
+  price: 400,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# mawashigiri.user = rayan
-# mawashigiri.save!
+mawashigiri.user = rayan
+mawashigiri.save!
 
-# pizzananas = Offer.create(
-#   location: "Paris",
-#   description: "el chefo di Roma",
-#   availability: true,
-#   capacity: 12,
-#   name: "Pizzananas",
-#   price: 100,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+pizzananas = Offer.create(
+  location: "Paris",
+  description: "El chefo di Roma",
+  availability: true,
+  capacity: 12,
+  name: "Pizzananas",
+  price: 100,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# pizzananas.user = max
-# pizzananas.save!
+pizzananas.user = max
+pizzananas.save!
 
-# bocuse = Offer.create(
-#   location: "Paris",
-#   description: "Master",
-#   availability: true,
-#   capacity: 20,
-#   name: "Coquillettes truffle",
-#   price: 900,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+bocuse = Offer.create(
+  location: "Paris",
+  description: "Master",
+  availability: true,
+  capacity: 20,
+  name: "Coquillettes truffle",
+  price: 900,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# bocuse.user = mihaja
-# bocuse.save!
+bocuse.user = mihaja
+bocuse.save!
 
-# robuchon = Offer.create(
-#   location: "Paris",
-#   description: "Multi stars",
-#   availability: true,
-#   capacity: 20,
-#   name: "Gastronomie at home",
-#   price: 300,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+robuchon = Offer.create(
+  location: "Paris",
+  description: "Multi stars",
+  availability: true,
+  capacity: 20,
+  name: "Gastronomie at home",
+  price: 300,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# robuchon.user = paul
-# robuchon.save!
+robuchon.user = paul
+robuchon.save!
 
-# etchebest = Offer.create(
-#   location: "Paris",
-#   description: "from South-West",
-#   availability: true,
-#   capacity: 20,
-#   name: "C'est croquant, c'est fondant",
-#   price: 300,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+etchebest = Offer.create(
+  location: "Paris",
+  description: "From South-West",
+  availability: true,
+  capacity: 20,
+  name: "C'est croquant, c'est fondant",
+  price: 300,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# etchebest.user = nadia
-# etchebest.save!
+etchebest.user = nadia
+etchebest.save!
 
-# pic = Offer.create(
-#   location: "Paris",
-#   description: "Best Chef in Le Marais",
-#   availability: true,
-#   capacity: 20,
-#   name: "Ciboulette & Arbalette",
-#   price: 300,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+pic = Offer.create(
+  location: "Paris",
+  description: "Best Chef in Le Marais",
+  availability: true,
+  capacity: 20,
+  name: "Ciboulette & Arbalette",
+  price: 300,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# pic.user = nicolas
-# pic.save!
+pic.user = nicolas
+pic.save!
 
-# lignac = Offer.create(
-#   location: "Paris",
-#   description: "bistro owner",
-#   availability: true,
-#   capacity: 20,
-#   name: "Harengs Pomme à l'huile",
-#   price: 300,
-#   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-# )
+lignac = Offer.create(
+  location: "Paris",
+  description: "Bistro owner",
+  availability: true,
+  capacity: 20,
+  name: "Harengs Pomme à l'huile",
+  price: 300,
+  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+)
 
-# lignac.user = guilhem
-# lignac.save!
+lignac.user = guilhem
+lignac.save!

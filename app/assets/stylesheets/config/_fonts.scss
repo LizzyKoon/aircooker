@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Verdana", "sans-serif";
-$headers-font: "Nunito", "Verdana", "sans-serif";
+$body-font: Verdana, Geneva, Tahoma, sans-serif;
+$headers-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,4 +14,3 @@ $headers-font: "Nunito", "Verdana", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
-

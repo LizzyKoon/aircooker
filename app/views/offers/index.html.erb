@@ -1,13 +1,15 @@
-<div class="container">
-  <div class="row w-100 ">
+<div class="container mt-3">
+  <div class="">
     <div class="">
-      <h1>CHEFS IN PARIS</h1>
-      <div class="cards">
+      <h2 id="chefs_title">CHEFS IN PARIS</h2>
+      <div class="cards mt-2">
         <% @offers.each do |offer| %>
-          <div class="col-12 col-sm-6 col-md-4 mb-3">
-              <div class="card">
+          <div class="mb-3">
+              <div class="card border-0">
                 <img src= "<%=offer.picture_url%>">
-                <%= link_to offer.name, offer_path(offer), class:"chef_name"%>
+                <%= link_to offer.name, offer_path(offer), class:"offer_name"%>
+                <%= link_to offer.description, offer_path(offer), class:"offer_description"%>
+                <%= link_to "#{offer.price} € per day", offer_path(offer), class:"offer_price"%>
               </div>
           </div>
         <% end %>
@@ -17,4 +19,3 @@
       </div>
   </div>
 </div>
-
