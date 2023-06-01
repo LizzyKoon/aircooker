@@ -14,6 +14,7 @@
     </div>
 
   </div>
+
   <div class="card w-50 h-auto p-3">
       <%#div class=""><%= @offer.availability ></div%%>
       Capacités:<div class=""><%= @offer.capacity %></div>
@@ -22,13 +23,7 @@
 
     </div>
 
-
-
-  <div data-controller="toggle">
-    <button class='btn btn-primary' data-action='click->toggle#fire'>Réserve ton repas</button>
-    <div data-toggle-target="togglableElement" class="d-none">
-      <%= render "booking_form", booking: @booking %>
-    </div>
+ 
   </div>
   <div class="footer">
   <div class="footer-links">
@@ -41,8 +36,17 @@
   </div>
 </div>
 </div>
+  </div>
+</div>
+
+  <div data-controller="toggle">
+    <button class='btn btn-primary' data-action='click->toggle#fire'>Book your meal</button>
+    <div data-toggle-target="togglableElement" class="d-none">
+      <%= render "booking_form", booking: @booking, data: {turbo_confirm: "Are you sure?"}%>
+    </div>
+   
 <%# déso nico %>
 
 <div class="container">
-
+<button> <%= link_to "Delete",offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></button>
 </div>
