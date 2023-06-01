@@ -1,0 +1,13 @@
+<h2>My offers</h2>
+<% @offers.each do |offer| %>
+<%= offer.name %>
+<%= offer.location %>
+<%= offer.description %>
+<%= offer.price %>
+<%=  %>
+<% end %>
+
+<h2>My bookings</h2>
+<% @bookings.each do |booking|  %>
+<%= booking.comment %>
+<% end %>
