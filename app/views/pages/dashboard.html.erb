@@ -1,11 +1,17 @@
 <h2>My offers</h2>
+
 <% @offers.each do |offer| %>
-<%= offer.name %>
-<%= offer.location %>
-<%= offer.description %>
-<%= offer.price %>
-<%=  %>
-<% end %>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= offer.name %></h5>
+     <p class="card-text"><%= offer.price %></p>
+     <p class="card-text"><%= offer.location %></p>
+    <p class="card-text"><%= offer.description %></p>
+    <a href="#" class="btn btn-primary"><%= link_to "Access this offer", offers_path(@offer) %></a>
+    <% end %>
+  </div>
+</div>
 
 <h2>My bookings</h2>
 <% @bookings.each do |booking|  %>
