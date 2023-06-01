@@ -35,12 +35,12 @@ boudin = Offer.create(
   name: "Boudin & Ravioles",
   price: 300
 )
-img = File.open("app/assets/images/boudin1.jpg")
-boudin.picture.attach(io: img, filename: "boudin1.jpg", content_type: "image/jpg")
-img = File.open("app/assets/images/boudin2.jpg")
-boudin.picture.attach(io: img, filename: "boudin2.jpg", content_type: "image/jpg")
-img = File.open("app/assets/images/boudin3.jpg")
-boudin.picture.attach(io: img, filename: "boudin3.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ravioles1.jpg")
+boudin.picture.attach(io: img, filename: "ravioles1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ravioles2.jpg")
+boudin.picture.attach(io: img, filename: "ravioles2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ravioles3.jpg")
+boudin.picture.attach(io: img, filename: "ravioles3.jpg", content_type: "image/jpg")
 
 boudin.user = julien
 boudin.save!
@@ -53,12 +53,12 @@ mawashigiri = Offer.create(
   name: "Mawashigiri",
   price: 400
 )
-img = File.open("app/assets/images/jap1.jpg")
-mawashigiri.picture.attach(io: img, filename: "jap1.jpg", content_type: "image/jpg")
-img = File.open("app/assets/images/jap2.jpg")
-mawashigiri.picture.attach(io: img, filename: "jap2.jpg", content_type: "image/jpg")
-img = File.open("app/assets/images/jap3.jpg")
-mawashigiri.picture.attach(io: img, filename: "jap3.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/sushi1.jpg")
+mawashigiri.picture.attach(io: img, filename: "sushi1.jpeg", content_type: "image/jpg")
+img = File.open("app/assets/images/sushi2.jpg")
+mawashigiri.picture.attach(io: img, filename: "sushi2.jpeg", content_type: "image/jpg")
+img = File.open("app/assets/images/sushi3.jpg")
+mawashigiri.picture.attach(io: img, filename: "sushi3.jpeg", content_type: "image/jpg")
 
 mawashigiri.user = rayan
 mawashigiri.save!
@@ -71,12 +71,12 @@ pizzananas = Offer.create(
   name: "Pizzananas",
   price: 100
 )
-img = File.open("app/assets/images/pizza.jpeg")
-pizzananas.picture.attach(io: img, filename: "pizza1.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/pizzananas.jpeg")
-pizzananas.picture.attach(io: img, filename: "pizza2.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/pizzananas2.jpeg")
-pizzananas.picture.attach(io: img, filename: "pizza3.jpeg", content_type: "image/jpeg")
+img = File.open("app/assets/images/pizza1.jpg")
+pizzananas.picture.attach(io: img, filename: "pizza1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/pizza2.jpg")
+pizzananas.picture.attach(io: img, filename: "pizza2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/pizza3.jpg")
+pizzananas.picture.attach(io: img, filename: "pizza3.jpg", content_type: "image/jpg")
 
 pizzananas.user = max
 pizzananas.save!
@@ -92,12 +92,12 @@ bocuse = Offer.create(
 bocuse.user = mihaja
 bocuse.save!
 
-img = File.open("app/assets/images/pizza.jpeg")
-bocuse.picture.attach(io: img, filename: "coquillettes1.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/pizzananas.jpeg")
-bocuse.picture.attach(io: img, filename: "coquillettes2.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/pizzananas2.jpeg")
-bocuse.picture.attach(io: img, filename: "coquillettes3.jpeg", content_type: "image/jpeg")
+img = File.open("app/assets/images/coquillettes1.jpg")
+bocuse.picture.attach(io: img, filename: "coquillettes1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/coquillettes2.jpg")
+bocuse.picture.attach(io: img, filename: "coquillettes2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/coquillettes3.jpg")
+bocuse.picture.attach(io: img, filename: "coquillettes3.jpg", content_type: "image/jpg")
 
 bocuse.user = max
 bocuse.save!
@@ -111,12 +111,12 @@ robuchon = Offer.create(
   price: 300
 )
 
-img = File.open("app/assets/images/pizza.jpeg")
-robuchon.picture.attach(io: img, filename: "coquillettes1.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/pizzananas.jpeg")
-bocuse.picture.attach(io: img, filename: "coquillettes2.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/pizzananas2.jpeg")
-bocuse.picture.attach(io: img, filename: "coquillettes3.jpeg", content_type: "image/jpeg")
+img = File.open("app/assets/images/gastro1.jpg")
+robuchon.picture.attach(io: img, filename: "gastro1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/gastro2.jpg")
+robuchon.picture.attach(io: img, filename: "gastro2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/gastro3.jpg")
+robuchon.picture.attach(io: img, filename: "gastro3.jpg", content_type: "image/jpg")
 
 
 robuchon.user = paul
@@ -131,6 +131,14 @@ etchebest = Offer.create(
   price: 300
 )
 
+img = File.open("app/assets/images/ouest1.jpg")
+etchebest.picture.attach(io: img, filename: "ouest1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ouest2.jpg")
+etchebest.picture.attach(io: img, filename: "ouest2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ouest3.jpg")
+etchebest.picture.attach(io: img, filename: "ouest3.jpg", content_type: "image/jpg")
+
+
 etchebest.user = nadia
 etchebest.save!
 
@@ -143,6 +151,14 @@ pic = Offer.create(
   price: 300
 )
 
+img = File.open("app/assets/images/ciboulette1.jpg")
+pic.picture.attach(io: img, filename: "ciboulette1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ciboulette2.jpg")
+pic.picture.attach(io: img, filename: "ciboulette2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ciboulette3.jpg")
+pic.picture.attach(io: img, filename: "ciboulette3.jpg", content_type: "image/jpg")
+
+
 pic.user = nicolas
 pic.save!
 
@@ -154,6 +170,15 @@ lignac = Offer.create(
   name: "Harengs Pomme à l'huile",
   price: 300
 )
+
+img = File.open("app/assets/images/harengs1.jpg")
+lignac.picture.attach(io: img, filename: "harengs1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/harengs2.jpg")
+lignac.picture.attach(io: img, filename: "harengs2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/harengs3.jpg")
+lignac.picture.attach(io: img, filename: "harengs3.jpg", content_type: "image/jpg")
+
+
 
 lignac.user = guilhem
 lignac.save!
