@@ -11,15 +11,15 @@
       <div class="w-100"><%= cl_image_tag @offer.picture[1].key, class:'offer-picture' %></div>
       <div class="w-100"><%= cl_image_tag @offer.picture[2].key, class:'offer-picture' %></div>
     </div>
-  </div>
-  </div>
-</div>
-
   <div data-controller="toggle">
     <button class='btn btn-primary' data-action='click->toggle#fire'>Book your meal</button>
     <div data-toggle-target="togglableElement" class="d-none">
       <%= render "booking_form", booking: @booking, data: {turbo_confirm: "Are you sure?"}%>
     </div>
+  </div>
+  </div>
+</div>
+
     <div class=""><%= @offer.availability %></div>
     <div class=""><%= @offer.capacity %></div>
     <div class=""><%= @offer.location %></div>
