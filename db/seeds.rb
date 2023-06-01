@@ -33,8 +33,8 @@ boudin = Offer.create(
   availability: true,
   capacity: 20,
   name: "Boudin & Ravioles",
-  price: 300
-  # picture_url: File.open(Rails.root.join('app/assets/images/gokurebeu.jpeg'))
+  price: 300,
+  picture_url: File.open(Rails.root.join('app/assets/images/gokurebeu.jpeg'))
   )
 img = File.open("app/assets/images/gokurebeu.jpeg")
 boudin.picture.attach(io: img, filename: "gokurebeu.jpeg", content_type: "image/jpeg")
