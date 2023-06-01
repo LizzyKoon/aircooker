@@ -34,7 +34,6 @@ boudin = Offer.create(
   capacity: 20,
   name: "Boudin & Ravioles",
   price: 300,
-  picture_url: File.open(Rails.root.join('app/assets/images/gokurebeu.jpeg'))
   )
 img = File.open("app/assets/images/gokurebeu.jpeg")
 boudin.picture.attach(io: img, filename: "gokurebeu.jpeg", content_type: "image/jpeg")
@@ -55,6 +54,10 @@ mawashigiri = Offer.create(
   price: 400,
   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
 )
+
+img = File.open("app/assets/images/boudin.jpeg")
+mawashigiri.picture.attach(io: img, filename: "boudin.jpeg", content_type: "image/jpeg")
+
 
 mawashigiri.user = rayan
 mawashigiri.save!
