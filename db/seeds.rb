@@ -29,150 +29,164 @@ p "created users"
 
 boudin = Offer.create(
   location: "Paris",
+  food_category: "French",
   description: "from Top Chef 2016",
   availability: true,
   capacity: 20,
   name: "Boudin & Ravioles",
-  price: 300,
-
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
-
-  )
-img = File.open("app/assets/images/gokurebeu.jpeg")
-boudin.picture.attach(io: img, filename: "gokurebeu.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/ravioli.jpeg")
-boudin.picture.attach(io: img, filename: "ravioli.jpeg", content_type: "image/jpeg")
-img = File.open("app/assets/images/boudin.jpeg")
-boudin.picture.attach(io: img, filename: "boudin.jpeg", content_type: "image/jpeg")
+  price: 300
+)
+img = File.open("app/assets/images/ravioles1.jpg")
+boudin.picture.attach(io: img, filename: "ravioles1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ravioles2.jpg")
+boudin.picture.attach(io: img, filename: "ravioles2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ravioles3.jpg")
+boudin.picture.attach(io: img, filename: "ravioles3.jpg", content_type: "image/jpg")
 
 boudin.user = julien
 boudin.save!
 
-
- mawashigiri = Offer.create(
-   location: "Paris",
-   description: "trained by the best japanese masters",
-   availability: false,
-   capacity: 15,
-   name: "Mawashigiri",
-   price: 400,
-   picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
- )
- img = File.open("app/assets/images/chefsushi.jpeg")
- mawashigiri.picture.attach(io: img, filename: "chefsushi.jpeg", content_type: "image/jpeg")
- img = File.open("app/assets/images/ramen.jpeg")
- mawashigiri.picture.attach(io: img, filename: "ramen.jpeg", content_type: "image/jpeg")
- img = File.open("app/assets/images/sushi.jpeg")
- mawashigiri.picture.attach(io: img, filename: "sushi.jpeg", content_type: "image/jpeg")
-
- mawashigiri.user = rayan
- mawashigiri.save!
-
- 
-
- 
 mawashigiri = Offer.create(
   location: "Paris",
-  description: "Trained by the best Japanese masters",
+  food_category: "Japanese",
+  description: "trained by the best japanese masters",
   availability: false,
   capacity: 15,
   name: "Mawashigiri",
-  price: 400,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 400
 )
-
- img = File.open("app/assets/images/chefsushi.jpeg")
- mawashigiri.picture.attach(io: img, filename: "chefsushi.jpeg", content_type: "image/jpeg")
- img = File.open("app/assets/images/ramen.jpeg")
- mawashigiri.picture.attach(io: img, filename: "ramen.jpeg", content_type: "image/jpeg")
- img = File.open("app/assets/images/sushi.jpeg")
- mawashigiri.picture.attach(io: img, filename: "sushi.jpeg", content_type: "image/jpeg")
-
+img = File.open("app/assets/images/sushi1.jpg")
+mawashigiri.picture.attach(io: img, filename: "sushi1.jpeg", content_type: "image/jpg")
+img = File.open("app/assets/images/sushi2.jpg")
+mawashigiri.picture.attach(io: img, filename: "sushi2.jpeg", content_type: "image/jpg")
+img = File.open("app/assets/images/sushi3.jpg")
+mawashigiri.picture.attach(io: img, filename: "sushi3.jpeg", content_type: "image/jpg")
 
 mawashigiri.user = rayan
 mawashigiri.save!
 
 pizzananas = Offer.create(
   location: "Paris",
+  food_category: "Italian",
   description: "El chefo di Roma",
   availability: true,
   capacity: 12,
   name: "Pizzananas",
-  price: 100,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 100
 )
- img = File.open("app/assets/images/pizza.jpeg")
- pizzananas.picture.attach(io: img, filename: "pizza.jpeg", content_type: "image/jpeg")
- img = File.open("app/assets/images/pizzananas.jpeg")
- pizzananas.picture.attach(io: img, filename: "pizzananas.jpeg", content_type: "image/jpeg")
- img = File.open("app/assets/images/pizzananas2.jpeg")
- pizzananas.picture.attach(io: img, filename: "pizzananas2.jpeg", content_type: "image/jpeg")
-
+img = File.open("app/assets/images/pizza1.jpg")
+pizzananas.picture.attach(io: img, filename: "pizza1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/pizza2.jpg")
+pizzananas.picture.attach(io: img, filename: "pizza2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/pizza3.jpg")
+pizzananas.picture.attach(io: img, filename: "pizza3.jpg", content_type: "image/jpg")
 
 pizzananas.user = max
 pizzananas.save!
 
 bocuse = Offer.create(
   location: "Paris",
+  food_category: "Italian",
   description: "Master",
   availability: true,
   capacity: 20,
   name: "Coquillettes truffle",
-  price: 900,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 900
 )
-
 bocuse.user = mihaja
+bocuse.save!
+
+img = File.open("app/assets/images/coquillettes1.jpg")
+bocuse.picture.attach(io: img, filename: "coquillettes1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/coquillettes2.jpg")
+bocuse.picture.attach(io: img, filename: "coquillettes2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/coquillettes3.jpg")
+bocuse.picture.attach(io: img, filename: "coquillettes3.jpg", content_type: "image/jpg")
+
+bocuse.user = max
 bocuse.save!
 
 robuchon = Offer.create(
   location: "Paris",
+  food_category: "French",
   description: "Multi stars",
   availability: true,
   capacity: 20,
   name: "Gastronomie at home",
-  price: 300,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 300
 )
+
+img = File.open("app/assets/images/gastro1.jpg")
+robuchon.picture.attach(io: img, filename: "gastro1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/gastro2.jpg")
+robuchon.picture.attach(io: img, filename: "gastro2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/gastro3.jpg")
+robuchon.picture.attach(io: img, filename: "gastro3.jpg", content_type: "image/jpg")
+
 
 robuchon.user = paul
 robuchon.save!
 
 etchebest = Offer.create(
   location: "Paris",
+  food_category: "American",
   description: "From South-West",
   availability: true,
   capacity: 20,
   name: "C'est croquant, c'est fondant",
-  price: 300,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 300
 )
+
+img = File.open("app/assets/images/ouest1.jpg")
+etchebest.picture.attach(io: img, filename: "ouest1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ouest2.jpg")
+etchebest.picture.attach(io: img, filename: "ouest2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ouest3.jpg")
+etchebest.picture.attach(io: img, filename: "ouest3.jpg", content_type: "image/jpg")
+
 
 etchebest.user = nadia
 etchebest.save!
 
 pic = Offer.create(
   location: "Paris",
+  food_category: "African",
   description: "Best Chef in Le Marais",
   availability: true,
   capacity: 20,
   name: "Ciboulette & Arbalette",
-  price: 300,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 300
 )
+
+img = File.open("app/assets/images/ciboulette1.jpg")
+pic.picture.attach(io: img, filename: "ciboulette1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ciboulette2.jpg")
+pic.picture.attach(io: img, filename: "ciboulette2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/ciboulette3.jpg")
+pic.picture.attach(io: img, filename: "ciboulette3.jpg", content_type: "image/jpg")
+
 
 pic.user = nicolas
 pic.save!
 
 lignac = Offer.create(
   location: "Paris",
+  food_category: "Belgium",
   description: "Bistro owner",
   availability: true,
   capacity: 20,
   name: "Harengs Pomme à l'huile",
-  price: 300,
-  picture_url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+  price: 300
 )
+
+img = File.open("app/assets/images/harengs1.jpg")
+lignac.picture.attach(io: img, filename: "harengs1.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/harengs2.jpg")
+lignac.picture.attach(io: img, filename: "harengs2.jpg", content_type: "image/jpg")
+img = File.open("app/assets/images/harengs3.jpg")
+lignac.picture.attach(io: img, filename: "harengs3.jpg", content_type: "image/jpg")
+
+
 
 lignac.user = guilhem
 lignac.save!
