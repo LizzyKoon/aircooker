@@ -31,7 +31,7 @@ class OffersController < ApplicationController
   end
 
   def delete
-    @flat = Flat.find(params[:id])
+    @offer = Offer.find(params[:id])
   end
 
   def destroy
