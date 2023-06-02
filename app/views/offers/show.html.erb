@@ -3,19 +3,22 @@
   <%#div class="list-group"%>
     <div class="test"><h1><%= @offer.name %></h1></div>
 
-  <div class="d-flex w-100 justify-content gap-3">
-    <div class="w-15 d-flex item align-content-start justify-content-between gap-2 images-container">
-      <div class="w-70">
-        <%= cl_image_tag @offer.picture[0].key, class:"offer-picture chef" %>
+
+    <div>Placeholder more info</div>
+
+  <div class="d-flex w-100 justify-content gap-5">
+    <div class="w-50 d-flex item align-content-start justify-content-between gap-2 images-container position-sticky">
+      <div class="w-50 ">
+      <% if  @offer.pictures[0].nil? %>
+      <% else %>
+        <%= cl_image_tag @offer.pictures[0].key, class:"offer-picture chef"%>
       </div>
       <div class="w-50 d-flex flex-column justify-content-between">
-        <div class="w-100">
-          <%= cl_image_tag @offer.picture[1].key, class:"offer-picture meal" %>
-        </div>
-        <div class="w-100">
-          <%= cl_image_tag @offer.picture[2].key, class:"offer-picture meal" %>
-        </div>
+        <div class="w-100 "><%= cl_image_tag @offer.pictures[1].key, class:"offer-picture meal" %></div>
+        <div class="w-100  "><%= cl_image_tag @offer.pictures[2].key, class:"offer-picture meal"%></div>
+
       </div>
+        <% end %>
     </div>
     <div class="w-50" id="sticky">
       <%= render "booking_form", booking: @booking, data: {turbo_confirm: "Are you sure?"} %>
@@ -47,19 +50,6 @@
   </div>
 
 
-  </div>
-  <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-  <div class="footer-copyright">
-   <%#i class="fas fa-heart"></i%>
-  </div>
-</div>
-</div>
-  </div>
 </div>
 
 
@@ -72,5 +62,8 @@
   <%# </div>
 </div>
 
-<div class="container">
-<button class = 'btn btn-danger'> <%= link_to "Delete",offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<div class="container d-flex justify-content-between">
+<button class = 'btn btn-danger'> <%= link_to "Delete",offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></button>
+<%= link_to "Back", offers_path, class: 'button-76' %>
+</div>
+

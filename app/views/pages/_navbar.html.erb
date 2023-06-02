@@ -26,7 +26,9 @@
 
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media.istockphoto.com/id/1190343179/fr/vectoriel/menu-du-site-web-ligne-forme-dic%C3%B4ne-de-liste-signe-de-logo-de-symbole-de-page.jpg?s=170667a&w=0&k=20&c=V5TngWrPQnsOqn_Wh0Ia_Uaw-yxbquGHoHb95O3VYBQ=" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
             <% if user_signed_in? %>
+              <%= link_to "My dashboard", pages_dashboard_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
               <% else %>
               <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
