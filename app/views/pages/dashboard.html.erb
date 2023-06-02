@@ -1,19 +1,56 @@
-<h2>My offers</h2>
+<div class="container w-75">
 
-<% @offers.each do |offer| %>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%= offer.name %></h5>
-     <p class="card-text"><%= offer.price %></p>
-     <p class="card-text"><%= offer.location %></p>
-    <p class="card-text"><%= offer.description %></p>
-    <a href="#" class="btn btn-primary"><%= link_to "Access this offer", offers_path(@offer) %></a>
-    <% end %>
-  </div>
-</div>
+<h2>My offers</h2>
+<hr>
+<div class="container mt-3">
+  <div class="">
+    <div class="">
+      <div class="cards mt-2">
+        <% @offers.each do |offer| %>
+          <div class="mb-3">
+              <div class="card border-0">
+                <% if offer.pictures.present? && offer.pictures[0].present? %>
+                  <%= cl_image_tag offer.pictures[0].key, class:'offer_chef_picture' %>
+                <% else %>
+                <% end %>
+                <%= link_to offer.name, offer_path(offer), class:"offer_name"%>
+                <%= link_to offer.description, offer_path(offer), class:"offer_description"%>
+                <%= link_to "#{offer.price} € per day", offer_path(offer), class:"offer_price"%>
+                <%# <button class = 'btn btn-danger'> <%= link_to "Delete", offers_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              </div>
+          </div>
+        <% end %>
+      </div>
+      <div>
 
 <h2>My bookings</h2>
+<hr>
+<%# <div class="cards mt-2">
 <% @bookings.each do |booking|  %>
-<%= booking.comment %>
-<% end %>
+     <%# <div class="mb-3"> %>
+     <%# <div class="card border-0"> %>
+      <%# <%= booking.comment %>
+      <%# <p>Start date</p><%= booking.start_date %>
+      <%# <%= booking.end_date %>
+      <%# <%= booking.total_amount %>
+  <%# <%= link_to 'See booking', offers_path(@offer)  %>
+  <%# <% end %>
+
+<div class="container mt-3">
+  <div class="">
+    <div class="card-body">
+      <div class="cards mt-2">
+        <% @bookings.each do |booking| %>
+          <div class="mb-3">
+              <div class="card border-0">
+                 <%= cl_image_tag booking.offer.pictures[0].key, class:'offer_chef_picture' %>
+                <p class='booking_start_date'> Start date: <%= booking.start_date %></p>
+                <p class='booking_start_date'> End_date:  <%= booking.end_date%> </p>
+                <p class='booking_start_date'> Comment: <%= booking.comment%> </p>
+                 <%= link_to "See offer", offer_path(booking.offer) %>
+              </div>
+          </div>
+        <% end %>
+      </div>
+      <div>
+</div>

@@ -7,9 +7,11 @@
           <div class="mb-3">
             <%= link_to offer_path(offer) do%>
               <div class="card border-0">
-                <% if !offer.pictures.empty? && offer.pictures[0].present? %>
+                <% if offer.pictures.present? && offer.pictures[0].present? %>
                   <%= cl_image_tag offer.pictures[0].key, class:'offer_chef_picture' %>
                 <% else %>
+
+                <span>No picture available</span>
 
                 <% end %>
                 <%= link_to offer.name, offer_path(offer), class:"offer-name"%>

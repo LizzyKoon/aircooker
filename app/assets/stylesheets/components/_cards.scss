@@ -131,6 +131,13 @@
   transform: translate(2px, 2px);
 }
 
+
+.booking_start_date {
+  letter-spacing: 1px;
+  color: black;
+  padding-bottom: 8px;
+  text-align: center
+}
 .button-75 {
   background-color: #fbeee0;
   border: 2px solid #422800;
@@ -162,4 +169,5 @@
 .button-75:active {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
+
 }
