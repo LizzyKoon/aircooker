@@ -3,17 +3,19 @@
     <div class="">
       <div class="bg-white p-3 shadow" style="border-radius: 10px">
         <div class ="border-radius">
-          <h3> <strong>Book a New Offer </strong></h3>
+          <h3> <strong>Book a Chef </strong></h3>
           <%= simple_form_for [@offer, @booking], data: { controller: 'dater', dater_price_value: @offer.price } do |f| %>
             <strong><%= "#{@offer.price}""€ "%></strong><%="per day"%>
-            <%= f.input :start_date, input_html: {data: { controller: 'datepicker', dater_target: "startDate",  } }, as: :string, style: "border:none border-radius: 25px" %>
-            <%= f.input :end_date, input_html: {data: { controller: 'datepicker', action:"change->dater#count",  dater_target: "endDate"} }, as: :string %>
-            <%# <%= start_date - end_date  %>
-            <%= f.input :comment, placeholder: 'comment' %>
-            <%# <%= f.input :total_amount, {data: { dater_target: "totalAmount", dater_price_value: @offer.price } }  %>
-            <hr>
-            <%= p (f.input :total_amount, disabled: true, readonly: true, input_html: { data: { dater_target: "totalAmount" } }) %>
-            <%= f.submit class: 'btn btn-success color-C23028' %>
+            <div class="mt-4">
+              <span style="font-size: 14px"><strong><%= f.input :start_date, input_html: {data: { controller: 'datepicker', dater_target: "startDate"}, placeholder: "Click to select a date" }, as: :string, style: "border:none border-radius: 25px" %></strong>
+              <span style="font-size: 14px"><strong><%= f.input :end_date, input_html: {data: { controller: 'datepicker', action:"change->dater#count",  dater_target: "endDate"}, placeholder:"Click to select a date" }, as: :string %></strong>
+              <%# <%= start_date - end_date  %>
+              <span style="font-size: 14px"><strong><%= f.input :comment %></strong>
+              <%# <%= f.input :total_amount, {data: { dater_target: "totalAmount", dater_price_value: @offer.price } }  %>
+              <hr>
+              <span style="font-size: 14px; border: none"><strong><%= p (f.input :total_amount, disabled: true, readonly: true, input_html: { data: { dater_target: "totalAmount" } }, class: 'custom-input') %></strong>
+              <%= f.submit class: 'btn btn-primary color-D7572B' %>
+            </div>
           <% end %>
         </div>
       </div>
