@@ -2,9 +2,10 @@
 <h2 class="text-center"> <strong>  Add a new offer</h2> </strong>
 <%= simple_form_for [@offer] do |f| %>
   <%= f.input :name %>
-  <%= f.input :description %>
+  <%= f.input :description  %>
   <%= f.input :capacity %>
   <%= f.input :price %>
+  <%= f.input :food_category %>
   <%= f.input :pictures, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Submit offers", class: "btn btn-primary" %>
 <% end %>
