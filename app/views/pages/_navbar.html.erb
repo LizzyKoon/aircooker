@@ -7,7 +7,8 @@
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Write your food category !"
+    placeholder: "Type your food category !",
+    style: "font-size: 12px"
   %>
   <%= submit_tag "Search", class: "btn btn-search" %>
 <% end %>
