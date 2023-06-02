@@ -17,15 +17,41 @@
     </div>
     <div class="w-50 sticky-top" id="sticky">
       <%= render "booking_form", booking: @booking, data: {turbo_confirm: "Are you sure?"}%>
+      <script src="app/javascript/controllers/sticky.js"></script>
     </div>
-
   </div>
 
-  <div class="card w-50 h-auto p-3">
+  <div class="card_description w-50 p-2">
       <%#div class=""><%= @offer.availability ></div%%>
-      Capacités:<div class=""><%= @offer.capacity %></div>
-      Localisation:<div class=""><%= @offer.location %></div>
-      Description:<div class=""><%= @offer.description %></div>
+
+    <div class="mb-4">
+      <div class="card_description_icon">
+        <i class="fa-solid fa-person" style="font-size: 1.5em;"></i>
+        <%= @offer.capacity %>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <div class="card_description_icon">
+        <i class="fa-solid fa-location-dot" style="font-size: 1.5em;"></i>
+         <%= @offer.location %>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <div class="card_description_icon">
+      <i class="fa-solid fa-utensils" style="font-size: 1.5em;"></i>
+        <%= @offer.food_category %>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <div class="card_description_icon">
+        <i class="fa-solid fa-shield"style="font-size: 1.5em;"></i>
+        <%= @offer.description %>
+      </div>
+    </div>
+
   </div>
 
 
@@ -51,9 +77,8 @@
     <div data-toggle-target="togglableElement" class="d-none"> %>
     <%# </div>
   </div> %>
-  </div>
+  <%# </div>
 </div>
 
 <div class="container">
-<button class = 'btn btn-danger'> <%= link_to "Delete",offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></button>
-</div>
+<button class = 'btn btn-danger'> <%= link_to "Delete",offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
