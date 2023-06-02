@@ -10,7 +10,7 @@
                 <% if !offer.pictures.empty? && offer.pictures[0].present? %>
                   <%= cl_image_tag offer.pictures[0].key, class:'offer_chef_picture' %>
                 <% else %>
-               
+
                 <% end %>
                 <%= link_to offer.name, offer_path(offer), class:"offer_name"%>
                 <%= link_to offer.description, offer_path(offer), class:"offer_description"%>
@@ -25,7 +25,7 @@
           <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
           </div>
            <div>
-           <%= link_to "Back", root_path, class: 'button-75' %>
+           <%= link_to "Back", offers_path, class: 'button-75' %>
            </div>
       </div>
   </div>
