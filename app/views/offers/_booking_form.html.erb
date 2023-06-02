@@ -14,7 +14,7 @@
               <%# <%= f.input :total_amount, {data: { dater_target: "totalAmount", dater_price_value: @offer.price } }  %>
               <hr>
               <span style="font-size: 14px; border: none"><strong><%= p (f.input :total_amount, disabled: true, readonly: true, input_html: { data: { dater_target: "totalAmount" } }, class: 'custom-input') %></strong>
-              <%= f.submit class: 'btn btn-primary color-D7572B' %>
+              <%=  f.submit class: 'btn btn-primary color-D7572B' %>
             </div>
           <% end %>
         </div>
