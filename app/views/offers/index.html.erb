@@ -5,21 +5,30 @@
       <div class="cards mt-2">
         <% @offers.each do |offer| %>
           <div class="mb-3">
+            <%= link_to offer_path(offer) do%>
               <div class="card border-0">
                 <% if offer.pictures.present? && offer.pictures[0].present? %>
                   <%= cl_image_tag offer.pictures[0].key, class:'offer_chef_picture' %>
                 <% else %>
+
                 <span>No picture available</span>
+
                 <% end %>
                 <%= link_to offer.name, offer_path(offer), class:"offer_name"%>
                 <%= link_to offer.description, offer_path(offer), class:"offer_description"%>
                 <%= link_to "#{offer.price} € per day", offer_path(offer), class:"offer_price"%>
               </div>
+               <% end %>
           </div>
         <% end %>
       </div>
-      <div>
-        <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
+      <div class="d-flex justify-content-between">
+          <div>
+          <%= link_to "Add a new offer", new_offer_path, class: 'button-74' %>
+          </div>
+           <div>
+           <%= link_to "Back", offers_path, class: 'button-75' %>
+           </div>
       </div>
   </div>
 </div>

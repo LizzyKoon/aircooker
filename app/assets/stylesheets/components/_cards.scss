@@ -25,6 +25,28 @@
   border: none;
 }
 
+.card img{
+  border-radius: 5px;
+  height: 200px;
+
+}
+
+.card-description {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgb(235,235,235);
+}
+
+.fa-solid {
+  padding: 8px 16px;
+  margin-top: 4pw;
+}
+
+.card-description:last-child{
+  border-bottom: none;
+}
+
 .offer_name {
   color:black;
   text-decoration: none;
@@ -36,6 +58,9 @@
   margin-top: 4px;
   margin-left:0p;
 }
+.offer_name:hover {
+  color: black;
+}
 
 .offer_chef_picture {
   width: 100%;
@@ -46,6 +71,10 @@
   object-fit: cover;
 }
 
+.offer_chef:hover {
+  color: black;
+}
+
 .offer_description {
   color: rgb(141, 141, 141);
   text-decoration: none;
@@ -53,6 +82,9 @@
   font-size: 9px;
   white-space: nowrap;
   margin-left:0p;
+}
+.offer_description:hover {
+  color: rgb(141, 141, 141);
 }
 
 .offer_price {
@@ -62,12 +94,15 @@
   font-weight: bold;
   text-decoration: none;
 }
+.offer_price:hover {
+  color: black;
+}
 
 .button-74 {
   background-color: #fbeee0;
   border: 2px solid #422800;
   border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
+  box-shadow: #422800 2px 2px 0 0;
   color: #422800;
   cursor: pointer;
   display: inline-block;
@@ -82,10 +117,13 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-bottom: 10px;
 }
 
 .button-74:hover {
-  background-color: #fff;
+  background-color: #fbeee0;
+  color: #422800;
+  opacity: 0.5;
 }
 
 .button-74:active {
@@ -93,9 +131,43 @@
   transform: translate(2px, 2px);
 }
 
+
 .booking_start_date {
   letter-spacing: 1px;
   color: black;
   padding-bottom: 8px;
   text-align: center
+}
+.button-75 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 2px 2px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11px;
+  padding: 0 18px;
+  right: 135px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+}
+
+.button-75:hover {
+  background-color: #fbeee0;
+  color: #422800;
+  opacity: 0.5;
+}
+
+.button-75:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+
 }
