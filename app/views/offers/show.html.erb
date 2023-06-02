@@ -46,6 +46,9 @@
 
   </div>
 
+  <div>
+<%= link_to "Back", offers_path, class: 'button-76' %>
+</div>
 
 </div>
 
@@ -61,5 +64,4 @@
 
 <div class="container d-flex justify-content-between">
 <button class = 'btn btn-danger'> <%= link_to "Delete",offer_path(@offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></button>
-<%= link_to "Back", offers_path, class: 'button-76' %>
-</div>
+
