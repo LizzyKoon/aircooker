@@ -5,7 +5,7 @@
         <div class ="border-radius">
           <h3> <strong>Book a New Offer </strong></h3>
           <%= simple_form_for [@offer, @booking], data: { controller: 'dater', dater_price_value: @offer.price } do |f| %>
-            <strong><%= "#{@offer.price}""€"%></strong><%="per day"%>
+            <strong><%= "#{@offer.price}""€ "%></strong><%="per day"%>
             <%= f.input :start_date, input_html: {data: { controller: 'datepicker', dater_target: "startDate",  } }, as: :string, style: "border:none border-radius: 25px" %>
             <%= f.input :end_date, input_html: {data: { controller: 'datepicker', action:"change->dater#count",  dater_target: "endDate"} }, as: :string %>
             <%# <%= start_date - end_date  %>
