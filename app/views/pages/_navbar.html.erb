@@ -1,8 +1,9 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <a class="navbar-brand" href="http://localhost:3000/">
-      <img src="https://static.vecteezy.com/ti/vecteur-libre/t2/623819-hat-chef-logo-et-symboless-gratuit-vectoriel.jpg" />
-</a>
+  <%= link_to root_path, class: "navbar-brand" do %>
+        <img src="https://static.vecteezy.com/ti/vecteur-libre/t2/623819-hat-chef-logo-et-symboless-gratuit-vectoriel.jpg" />
+  <% end %>
+
   <%= form_with url: offers_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
     params[:query],
