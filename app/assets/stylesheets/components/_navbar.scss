@@ -49,6 +49,7 @@
   align-items: center;
   background-clip: padding-box;
   background-color: #fa6400;
+
   border: 1px solid transparent;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -69,4 +70,8 @@
   -webkit-user-select: none;
   vertical-align: baseline;
   width: auto;
+}
+.btn-search:hover {
+  background-color: #b6510e;
+  color: #fff;
 }
