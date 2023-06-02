@@ -23,6 +23,12 @@
   width: auto;
 }
 
+.card img{
+  border-radius: 5px;
+  height: 200px;
+
+}
+
 .offer_name {
   color:black;
   text-decoration: none;
@@ -34,6 +40,9 @@
   margin-top: 4px;
   margin-left:0p;
 }
+.offer_name:hover {
+  color: black;
+}
 
 .offer_chef_picture {
   width: 100%;
@@ -44,6 +53,10 @@
   object-fit: cover;
 }
 
+.offer_chef:hover {
+  color: black;
+}
+
 .offer_description {
   color: rgb(141, 141, 141);
   text-decoration: none;
@@ -52,6 +65,9 @@
   white-space: nowrap;
   margin-left:0p;
 }
+.offer_description:hover {
+  color: rgb(141, 141, 141);
+}
 
 .offer_price {
   color: #422800;
@@ -59,6 +75,9 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   text-decoration: none;
+}
+.offer_price:hover {
+  color: black;
 }
 
 .button-74 {
@@ -83,7 +102,9 @@
 }
 
 .button-74:hover {
-  background-color: #fff;
+  background-color: #fbeee0;
+  color: #422800;
+  opacity: 0.5;
 }
 
 .button-74:active {
