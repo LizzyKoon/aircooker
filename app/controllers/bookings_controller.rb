@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking.offer = @offer
     @booking.user = current_user
     if @booking.save
-      redirect_to offer_path(@offer)
+      redirect_to pages_dashboard_path
        #ajouter alerte
     else
       render :new, status: :unprocessable_entity
@@ -22,6 +22,13 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+  end
+
+  def price
+    @offer = Offer.find(params[:offer_id])
+    @booking = Booking.find(params[:id])
+    @booking.offer = @offer
+    @booking.end_date - @booking.start_date
   end
 
   private
