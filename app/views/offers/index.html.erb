@@ -7,7 +7,7 @@
           <div class="mb-3">
               <div class="card border-0">
                 <% if offer.picture.present? && offer.picture[0].present? %>
-                  <%= cl_image_tag offer.picture[0].key, class:'offer_chef_picture' %>
+                  <%# <%= cl_image_tag offer.picture[0].key, class:'offer_chef_picture' %>
                 <% else %>
                 <span>No picture available</span>
                 <% end %>
