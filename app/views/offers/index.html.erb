@@ -6,10 +6,15 @@
         <% @offers.each do |offer| %>
           <div class="mb-3">
               <div class="card border-0">
+<<<<<<< HEAD
                 <% if offer.picture.present? && offer.picture[0].present? %>
                   <%# <%= cl_image_tag offer.picture[0].key, class:'offer_chef_picture' %>
+=======
+                <% if !offer.pictures.empty? && offer.pictures[0].present? %>
+                  <%= cl_image_tag offer.pictures[0].key, class:'offer_chef_picture' %>
+>>>>>>> 2b697cf0369eb40c8b3aa9aca4fcc8b783a33f4f
                 <% else %>
-                <span>No picture available</span>
+               
                 <% end %>
                 <%= link_to offer.name, offer_path(offer), class:"offer_name"%>
                 <%= link_to offer.description, offer_path(offer), class:"offer_description"%>

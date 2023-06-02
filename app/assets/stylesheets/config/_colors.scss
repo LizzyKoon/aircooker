@@ -12,3 +12,9 @@ $yellow: #F6B339;
 $orange1: #DA7B27;
 $mandarine: #D7572B;
 $red: #C23028;
+
+
+body {
+  min-height: calc(100vh - 80px);
+  background-color: pink;
+}
